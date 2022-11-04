@@ -1,0 +1,1242 @@
+/* Start Variable */
+:root {
+    --main-color: #1da1f2;
+    --second-color: #14171a;
+    --third-color: #657786;
+    --fourth-color: #aab8c2;
+    --fifth-color: #e1e8ed;
+    --sixth-color: #f5f8fa;
+    --main-transition: 0.3s;
+    --section-padding: 50px;
+    --section-padding: 50px;
+    --fa-style-family-classic: "Font Awesome 6 Free";
+    /* padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding); */
+}
+
+/* End Variable */
+
+/* Start Global Rules */
+* {
+    --webkit-box-sizing: border-box;
+    --moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: white;
+}
+
+*:focus {
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.current-page span {
+    font-weight: bold;
+}
+
+.center-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.between-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.column-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.d-block {
+    display: block;
+}
+
+/* ::-webkit-scrollbar {
+    width: 15px;
+}
+::-webkit-scrollbar-track {
+    background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--blue-color);
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--blue-alt-color);
+} */
+
+/* .goto-up i {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid var(--third-color);
+    color: var(--second-color);
+    background-color: var(--main-color);
+    font-size: 22px;
+    right: 50px;
+    bottom: 40px;
+    z-index: 500;
+}
+
+@media (max-width: 767px) {
+    .goto-up i {
+        right: 20px;
+        bottom: 150px;
+    }
+} */
+
+
+/* اعملت هاي علشان بدي اللون اللي ورا يملا الشاشة لكن الكونتنت اللي ورا تملا من الاول للاخر */
+.container {
+    /* كتبنا ال بادنك علشان الكلام في نسخة الموبايل ما يبلش من اول الشاشة */
+    padding-left: 15px;
+    padding-right: 15px;
+    /* علشان الكونتينر يمسك العناصر في النص */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Small screens */
+@media (min-width: 768px){
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium screens */
+@media (min-width: 992px){
+    .container{
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/* End Global Rules */
+
+/* Start Component */
+
+/* End Component */
+
+/******************************************************************************************************/
+
+.page {
+    min-height: 100vh;
+}
+
+/* Start Sidebar-lists */
+
+.sidebar-lists {
+    width: 19%;
+    min-height: 100vh;
+    padding: 10px 20px 20px 0;
+    background-color: white;
+    border-right: 1px solid var(--fifth-color);
+    position: relative;
+    position: fixed;
+}
+
+@media (max-width: 1189px) {
+    .sidebar-lists {
+        width: 6%;
+        padding-right: 12px;
+    }
+}
+
+@media (max-width: 780px) {
+    .sidebar-lists {
+        width: 8%;
+        padding-right: 14px;
+    }
+}
+
+@media (max-width: 767px) {
+    .sidebar-lists {
+        display: none;
+    }
+}
+
+.sidebar-lists .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    transition: var(--main-transition);
+}
+
+@media (max-width: 1189px) {
+    .sidebar-lists .logo {
+        margin-left: 0;
+    }
+}
+
+.sidebar-lists .logo:hover {
+    background-color: rgb(29 161 242 / 10%);
+}
+
+.sidebar-lists .logo .twitter {
+    color: var(--main-color);
+    font-size: 30px;
+}
+
+.sidebar-lists ul li {
+    cursor: pointer;
+    transition: var(--main-transition);
+}
+
+.sidebar-lists ul li a {
+    width: fit-content;
+    color: var(--second-color);
+    font-size: 20px;
+    padding: 15px 20px;
+    border-radius: 30px;
+    position: relative;
+    transition: var(--main-transition);
+}
+
+.sidebar-lists ul li:hover a {
+    background-color: var(--fifth-color);
+}
+
+.sidebar-lists ul li span {
+    font-size: 18px;
+    margin-left: 15px;
+}
+
+@media (max-width: 1366px) {
+    .sidebar-lists ul li a {
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 1116px) {
+    .sidebar-lists ul li a {
+        margin-bottom: 2px;
+    }
+}
+
+@media (max-width: 1189px) {
+    .sidebar-lists ul li a {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .sidebar-lists ul li span {
+        display: none;
+    }
+
+    .sidebar-lists ul li a:hover::before {
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        background-color: rgb(20 23 26 / 70%);
+        font-size: 10px;
+        border-radius: 3px;
+        padding: 3px 4px;
+        z-index: 1000;
+    }
+    .sidebar-lists ul li:first-of-type a:hover::before {
+        content: "Home";
+    }
+    .sidebar-lists ul li:nth-of-type(2) a:hover::before {
+        content: "Explore";
+    }
+    .sidebar-lists ul li:nth-of-type(3) a:hover::before {
+        content: "Notifications";
+    }
+    .sidebar-lists ul li:nth-of-type(4) a:hover::before {
+        content: "Messages";
+    }
+    .sidebar-lists ul li:nth-of-type(5) a:hover::before {
+        content: "Bookmarks";
+    }
+    .sidebar-lists ul li:nth-of-type(6) a:hover::before {
+        content: "Lists";
+    }
+    .sidebar-lists ul li:nth-of-type(7) a:hover::before {
+        content: "Profile";
+    }
+    .sidebar-lists ul li:last-of-type a:hover::before {
+        content: "More";
+    }
+}
+
+.sidebar-lists .button {
+    background-color: var(--main-color);
+    width: 210px;
+    text-align: center;
+    padding: 15px 0;
+    border-radius: 30px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: var(--main-transition);
+}
+
+.sidebar-lists .button .active {
+    display: none;
+}
+
+.sidebar-lists .button a {
+    color: white;
+    font-weight: bold;
+}
+
+.sidebar-lists .button:hover {
+    background-color: #167dbd;
+}
+
+@media (max-width: 1189px) {
+    .sidebar-lists .button {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        position: relative;
+    }
+    .sidebar-lists .button:hover::before {
+        content: "Tweet";
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        background-color: rgb(20 23 26 / 70%);
+        font-size: 10px;
+        border-radius: 3px;
+        padding: 3px 4px;
+        z-index: 1000;
+    }
+    .sidebar-lists .button .active {
+        display: block;
+        color: white;
+    }
+    .sidebar-lists .button .active i {
+        font-size: 20px;
+    }
+    .sidebar-lists .button a:last-of-type {
+        display: none;
+    }
+}
+
+.sidebar-lists .account {
+    position: absolute;
+    bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: var(--main-transition);
+}
+
+@media (max-width: 1189px) {
+    .sidebar-lists .account {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .sidebar-lists .account:hover::before {
+        content: "Accounta";
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        background-color: rgb(20 23 26 / 70%);
+        font-size: 10px;
+        border-radius: 3px;
+        padding: 3px 4px;
+        z-index: 1000;
+    }
+}
+
+.sidebar-lists .account:hover {
+    background-color: var(--fifth-color);
+}
+
+.sidebar-lists .account img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.sidebar-lists .account > div {
+    gap: 10px;
+}
+
+.sidebar-lists .account .info span {
+    display: block;
+}
+
+.sidebar-lists .account .info span:first-child {
+    color: var(--second-color);
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.sidebar-lists .account .info span:last-child {
+    color: var(--third-color);
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.sidebar-lists .account i {
+    color: var(--second-color);
+}
+
+@media (max-width: 1189px) {
+    .sidebar-lists .account .info,
+    .sidebar-lists .account i {
+        display: none;
+    }
+}
+
+
+/***********************************************************/
+
+/* Start posts */
+.posts {
+    width: 70%;
+    height: 100%;
+    background-color: red;
+    display: flex;
+    flex-flow: column nowrap;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* justify-content: space-around; */
+}
+
+.posts .write-post .title {
+    padding: 10px;
+}
+
+.posts .write-post .title h4 {
+    flex: 1;
+    font-size: 20px;
+}
+
+.posts .write-post .title i {
+    cursor: pointer;
+}
+
+.posts .write {
+    gap: 10px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.posts .write input {
+    width: 100%;
+}
+
+.posts .addition {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.posts .addition .post-icons i {
+    color: var(--main-color);
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.posts .addition button {
+    background-color: #8ed0f9;
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: var(--main-transition);
+}
+
+.posts .addition button:hover {
+    background-color: var(--main-color);
+}
+/* End posts */
+
+/***********************************************************/
+
+/* Start sidebar-search */
+.sidebar-search {
+    width: 15%;
+    height: 100%;
+    /* position: sticky;
+    top: 0; */
+    background: yellow;
+    border-left: 1px solid rgb(230, 236, 240);
+}
+/* End sidebar-search */
+
+/***********************************************************/
+
+/* Start Sign  */
+.sign-page {
+    background-color: #999999;
+    min-height: 100vh;
+    position: relative;
+}
+
+@media (max-width: 767px) {
+    .sign-page {
+        background-color: white;
+    }
+}
+
+.sign-page .sign-box {
+    background-color: white;
+    max-width: 100%;
+    width: 600px;
+    height: 650px;
+    border-radius: 15px;
+    padding: 20px 20px 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media (min-width: 768px) and (max-width: 1366px) {
+    .sign-page .sign-box {
+        height: calc(100% - 60px);
+    }
+}
+
+@media (max-width: 767px) {
+    .sign-page .sign-box {
+        height: 100%;
+    }
+}
+
+/* .sign-page .sign-box::before {
+    font-family: var(--fa-style-family-classic);
+    content: "\f00d";
+    position: absolute;
+    font-weight: 900;
+    font-size: 20px;
+    top: 15px;
+    left: 15px;
+    cursor: pointer;
+} */
+
+.sign-page .sign-box .title {
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.sign-page .sign-box .title i.mark {
+    color: var(--second-color);
+    cursor: pointer;
+}
+
+.sign-page .sign-box .twitter {
+    color: var(--main-color);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+}
+
+.sign-page .sign-box .sign {
+    width: 320px;
+    height: 500px;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 767px) {
+    .sign-page .sign-box .sign {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1366px) {
+    .sign-page .sign-box .sign {
+        margin-top: 50px;
+    }
+}
+
+.sign-page .sign h2 {
+    font-size: 25px;
+    text-align: left;
+    margin: 0;
+    padding-bottom: 15px;
+}
+
+.sign-page .sign .links a {
+    margin-top: 18px;
+    max-width: 100%;
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    border-radius: 30px;
+    transition: var(--main-transition);
+}
+
+.sign-page .sign .links a:hover {
+    border-color: rgb(29 161 242 / 50%);
+    background-color: #EEE;
+}
+
+.sign-page .sign .links a:last-of-type {
+    color: black;
+    padding: 8px 10px;
+    gap: 8px;
+    transition: var(--main-transition);
+}
+
+.sign-page .sign .links a:last-of-type i {
+    font-size: 20px;
+}
+
+.sign-page .sign .links a:last-of-type span {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.sign-page .sign .links a .email {
+    gap: 10px;
+}
+
+.sign-page .sign .links a .email > div {
+    text-align: left;
+}
+
+.sign-page .sign .links a .email > div span {
+    font-size: 13px;
+}
+
+.sign-page .sign .links a .email > div span:first-child {
+    color: var(--second-color);
+    font-weight: bold;
+}
+
+.sign-page .sign .links a .email > div span:last-child {
+    color: var(--third-color);
+}
+
+.sign-page .sign hr {
+    position: relative;
+    margin: 20px 0;
+}
+
+.sign-page .sign hr::before {
+    content: "or";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 25px;
+    height: 20px;
+    font-size: 14px;
+}
+
+.sign-page .sign form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+    max-width: 100%;
+    margin-bottom: 30px;
+}
+
+.sign-page .sign form input {
+    max-width: 100%;
+    width: 100%;
+}
+
+.sign-page .sign form input[type="email"] {
+    height: 50px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    outline: none;
+    border-radius: 4px;
+    font-size: 15px;
+    position: relative;
+}
+
+.sign-page .sign form input[type="email"]:focus,
+.sign-page .login-child form input:focus {
+    border: 2px solid var(--main-color);
+}
+
+.sign-page .sign form input[type="email"]::placeholder,
+.sign-page .login-child form input::placeholder {
+    transition: var(--main-transition);
+}
+
+.sign-page .sign form input[type="email"]:focus::placeholder,
+.sign-page .login-child form input:focus::placeholder {
+    opacity: 0;
+}
+
+.sign-page .sign form button,
+.sign-page .sign .button {
+    padding: 8px 0;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: var(--second-color);
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--main-transition);
+}
+
+.sign-page .sign form button:hover,
+.sign-page .sign .button:hover {
+    background-color: rgb(0 0 0 / 80%);
+}
+
+.sign-page .sign form a {
+    max-width: 100%;
+    width: 100%;
+    color: var(--second-color);
+    border: 1px solid #ccc;
+    font-size: 14px;
+    font-weight: 900;
+    padding: 8px;
+    border-radius: 30px;
+    transition: var(--main-transition);
+}
+
+.sign-page .sign form a:hover {
+    background-color: #EEE;
+}
+
+.sign-page .sign .login-link {
+    gap: 5px;
+    font-size: 15px;
+    margin-top: 50px;
+}
+
+.sign-page .sign .login-link p {
+    color: var(--second-color);
+}
+
+.sign-page .sign .login-link a,
+.sign-page .login-child form input + a
+.sign-page .login-child form.sign-password .login-link a {
+    color: var(--main-color);
+    font-weight: 900;
+    transition: var(--main-transition);
+}
+
+.sign-page .sign .login-link a:hover,
+.sign-page .login-child form input + a:hover {
+    color: #156da3;
+}
+
+.sign-page .sign-box img {
+    max-width: 100%;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.sign-page .sign .button a {
+    color: white;
+}
+
+.sign-page .sign .button + p {
+    margin: 15px 0;
+    text-align: left;
+    color: var(--second-color);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.sign-page .sign .button + p a,
+.sign-page .login-child .customize-info + p a,
+.sign-page .login-child .information p a {
+    color: var(--main-color);
+}
+
+/***********************************************************/
+/* Start Login-1 */
+
+.sign-page .login-child {
+    width: 100%;
+    height: 100%;
+    padding: 20px 20px 50px;
+    position: relative;
+}
+
+@media (min-width: 768px) and (max-width: 1366px) {
+    .sign-page .scroll  {
+        overflow-y: auto;
+    }
+}
+
+.sign-page .login-child h1 {
+    margin: 0;
+    margin-bottom: 20px;
+    color: var(--second-color);
+}
+
+.sign-page .login-child h2 {
+    margin-bottom: 20px;
+    color: var(--second-color);
+}
+
+.sign-page .login-child form {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+}
+
+.sign-page .login-child form input {
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 25px;
+    height: 55px;
+    padding: 0 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    position: relative;
+}
+
+.sign-page .login-child form input + a {
+    color: var(--main-color);
+    margin-left: auto;
+    font-weight: normal;
+}
+
+.sign-page .login-child form .date {
+    margin: 10px 0 30px;
+}
+
+.sign-page .login-child form .date h4 {
+    color: var(--second-color);
+}
+
+.sign-page .login-child form .date p {
+    margin: 10px 0 20px;
+    color: var(--third-color);
+    font-size: 14px;
+}
+
+.sign-page .login-child form .date .info {
+    gap: 10px;
+}
+
+.sign-page .login-child form .date .info > div {
+    border: 1px solid #ccc;
+    padding: 15px 10px 0;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-radius: 6px;
+}
+
+.sign-page .login-child form .date .info > div:first-of-type {
+    flex: 1;
+}
+
+@media (max-width: 767px) {
+    .sign-page .login-child form .date .info > div:first-of-type {
+        width: 40%;
+    }
+    .sign-page .login-child form .date .info > div:nth-of-type(2) {
+        width: 30%;
+    }
+    .sign-page .login-child form .date .info > div:last-of-type {
+        width: 30%;
+    }
+}
+
+.sign-page .login-child form .date .info > div span {
+    font-size: 14px;
+}
+
+.sign-page .login-child form .date .info > div select {
+    width: 100%;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+}
+
+.sign-page .login-child .next,
+.sign-page .login-child .information button {
+    color: white;
+    background-color: rgb(0 0 0 / 50%);
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+    border: none;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 15px 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: var(--main-transition);
+}
+
+.sign-page .login-child .next:hover {
+    background-color: var(--second-color);
+}
+
+@media (max-width: 767px) {
+    .sign-page .login-child .next {
+        margin-top: 85px;
+    }
+}
+/* End Login-1 */
+
+/***********************************************************/
+/* Start Login-2 */
+.sign-page .login-child .customize-info h3 {
+    color: var(--second-color);
+}
+
+.sign-page .login-child .customize-info p {
+    color: var(--second-color);
+    margin: 10px 0;
+    font-size: 15px;
+    max-width: 500px;
+}
+
+.sign-page .login-child .customize-info input[type="checkbox"] {
+    --webkit-appearance: none;
+    appearance: none;
+}
+
+.sign-page .login-child .customize-info label {
+    position: relative;
+    cursor: pointer;
+}
+
+.sign-page .login-child .customize-info label::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 3px solid var(--third-color);
+    border-radius: 4px;
+    width: 18px;
+    height: 18px;
+    transition: var(--main-transition);
+}
+
+.sign-page .login-child .customize-info label:hover::before {
+    border-color: var(--main-color);
+}
+
+.sign-page .login-child .customize-info label::after {
+    font-family: var(--fa-style-family-classic);
+    content: "\f00c";
+    font-weight: 900;
+    color: white;
+    background-color: var(--main-color);
+    width: 19px;
+    height: 19px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0) rotate(360deg);
+}
+
+.sign-page .login-child .customize-info input[type="checkbox"]:checked + label::after {
+    transform: scale(1) rotate(0);
+}
+
+.sign-page .login-child .customize-info input[type="checkbox"]:checked + label::before {
+    border-color: var(--main-color);
+}
+
+.sign-page .login-child .customize-info + div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+.sign-page .login-child .customize-info + div p {
+    color: var(--second-color);
+    margin: 50px 0;
+    font-size: 15px;
+}
+
+.sign-page .login-child .customize-info + div p + button {
+    color: white;
+    background-color: rgb(0 0 0 / 50%);
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    border: none;
+    font-size: 20px;
+    padding: 15px 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: var(--main-transition);
+}
+
+.sign-page .login-child .customize-info + div p + button:hover {
+    background-color: var(--second-color);
+}
+
+/* End Login-2 */
+
+/***********************************************************/
+
+/* Start Login-3 */
+.sign-page .login-child .information {
+    margin-top: 20px;
+}
+
+.sign-page .login-child .information p {
+    color: var(--second-color);
+    margin: 10px 0 50px;
+    font-size: 14px;
+}
+
+.sign-page .login-child .information button {
+    background-color: var(--main-color);
+    padding: 15px 0;
+    cursor: pointer;
+}
+
+.sign-page .login-child .information button:hover {
+    background-color: rgb(29 161 242 / 70%);
+}
+
+.sign-page .login-child .information button {
+    color: white;
+}
+
+/* End Login-3 */
+
+/* End Sign  */
+
+/***********************************************************/
+
+/* Start Loding */
+.loding {
+    background-color: white;
+    min-height: 100vh;
+    position: relative;
+}
+
+.loding i {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 900;
+    font-size: 65px;
+    color: var(--main-color);
+    animation: opacity 4s linear infinite alternate;
+}
+
+@keyframes opacity {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+/* End Loding */
+
+/***********************************************************/
+
+/* Start Password */
+.sign-page .login-child form.sign-password {
+    height: 100%;
+    position: relative;
+}
+
+.sign-page .login-child form.sign-password input[type="email"]:hover {
+    cursor: no-drop;
+}
+
+.sign-page .login-child form.sign-password a + div {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sign-page .login-child form.sign-password button {
+    color: white;
+    background-color: rgb(0 0 0 / 50%);
+    font-size: 20px;
+    font-weight: bold;
+    max-width: 100%;
+    width: 100%;
+    padding: 15px 0;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: var(--main-transition);
+}
+
+.sign-page .login-child form.sign-password button:hover {
+    background-color: var(--second-color);
+}
+
+.sign-page .login-child form.sign-password .login-link {
+    gap: 5px;
+    font-size: 15px;
+}
+
+.sign-page .login-child form.sign-password .login-link p {
+    color: var(--second-color);
+}
+
+.sign-page .login-child form.sign-password .login-link a {
+    color: var(--main-color);
+    font-weight: 900;
+    transition: var(--main-transition);
+}
+
+.sign-page .login-child form.sign-password .login-link a:hover {
+    color: #156da3;
+}
+
+/* End Password */
+
+/***********************************************************/
+
+/* Start Forgot Password */
+
+.sign-page .login-child h1 + p {
+    color: var(--third-color);
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.sign-page .login-child .forgot {
+    height: 100%;
+}
+
+@media (max-width: 767px) {
+    .sign-page .login-child .forgot {
+        height: 92%;
+    }
+}
+
+.sign-page .login-child .forgot a {
+    width: 100%;
+}
+
+.sign-page .login-child .forgot a {
+    color: white;
+    background-color: rgb(0 0 0 / 50%);
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px 0;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: var(--main-transition);
+}
+
+.sign-page .login-child .forgot a:hover {
+    color: white;
+    background-color: var(--second-color);
+}
+
+/* End Forgot Password */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1020,6 +1020,10 @@ ul {
     font-size: 15px;
 }
 
+.sign-page .login-child .customize-info + div p a {
+    color: var(--main-color);
+}
+
 .sign-page .login-child .customize-info + div p + button {
     color: white;
     background-color: rgb(0 0 0 / 50%);
@@ -1177,7 +1181,7 @@ ul {
 }
 
 .sign-page .login-child .forgot {
-    height: 100%;
+    height: 90%;
 }
 
 @media (max-width: 767px) {
@@ -1186,12 +1190,9 @@ ul {
     }
 }
 
-.sign-page .login-child .forgot a {
-    width: 100%;
-}
-
-.sign-page .login-child .forgot a {
+.sign-page .login-child .forgot button {
     color: white;
+    width: 100%;
     background-color: rgb(0 0 0 / 50%);
     font-size: 20px;
     font-weight: bold;
@@ -1203,7 +1204,7 @@ ul {
     transition: var(--main-transition);
 }
 
-.sign-page .login-child .forgot a:hover {
+.sign-page .login-child .forgot button:hover {
     color: white;
     background-color: var(--second-color);
 }

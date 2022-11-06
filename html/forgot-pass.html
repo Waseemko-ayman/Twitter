@@ -22,18 +22,19 @@
         <div class="container">
             <div class="sign-box">
                 <div class="title between-flex">
-                    <a href="sign.html"><i class="fa-solid fa-x mark"></i></a>
+                    <i class="fa-solid fa-x mark" onclick="redirectMe('sign.html')"></i>
                     <i class="fab fa-twitter twitter"></i>
                 </div>
                 <div class="login-child">
                     <h1>Find your Twitter account</h1>
                     <form class="column-flex forgot">
-                        <input type="email" placeholder="Enter your email, phone number or username" required>
+                        <input id="blur" type="email" placeholder="Enter your email, phone number or username" required>
                         <a href="Doc-data.html">Search</a>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+    <script src="../JavaScript/twitter.js"></script>
 </body>
 </html>

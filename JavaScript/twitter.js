@@ -10,6 +10,15 @@ function redirectMe(url) {
     window.location = url;
 }
 
+let link = document.getElementById("convert");
+let phone = document.getElementById("phone");
+
+link.onclick = function () {
+    phone.setAttribute("placeholder", "Your Email");
+    phone.setAttribute("type", "email");
+    link.innerHTML = "Use phone from it";
+}
+
 
 // let email = document.querySelector(".email");
 // let button = document.querySelector(".button");

@@ -10,15 +10,27 @@ function redirectMe(url) {
     window.location = url;
 }
 
+///////////////////////////////////////////////////
+
+// In Login-1.html
+
 let link = document.getElementById("convert");
 let phone = document.getElementById("phone");
 
 link.onclick = function () {
-    phone.setAttribute("placeholder", "Your Email");
-    phone.setAttribute("type", "email");
-    link.innerHTML = "Use phone from it";
+    if (link.innerHTML === "Use e-mail from it") {
+        phone.setAttribute("placeholder", "Your Email");
+        phone.setAttribute("type", "email");
+        link.innerHTML = "Use phone from it";
+    } 
+    else if (link.innerHTML === "Use phone from it") {
+        phone.setAttribute("placeholder", "Your Phone");
+        phone.setAttribute("type", "phone");
+        link.innerHTML = "Use e-mail from it";
+    }
 }
 
+///////////////////////////////////////////////////
 
 // let email = document.querySelector(".email");
 // let button = document.querySelector(".button");

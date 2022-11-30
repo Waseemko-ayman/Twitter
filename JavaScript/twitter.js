@@ -5,6 +5,12 @@ window.onload = function () {
     input.focus();
 };
 
+input.onblur = function () {
+    if (input.value !== "") {
+        phone.focus();
+    }
+}
+
 
 function redirectMe(url) {
     window.location = url;
@@ -29,6 +35,28 @@ link.onclick = function () {
         link.innerHTML = "Use e-mail from it";
     }
 }
+
+let registers = document.getElementById("register");
+registers.onclick = function () {
+    window.alert("Are you sure you want to register??");
+}
+
+
+///////////////////////////////////////////////////
+
+// let yorAge = document.querySelector("#age");
+// let button = document.querySelector("#submit");
+
+// button.onclick = function () {
+//     function ages(yorAge) {
+//         if (yorAge.value < 17) {
+//             window.alert("Dear !! You are too young, sorry you cannot login to this site");
+//         } else {
+//             window.alert("our end !! You can login to this site");
+//         }
+//     }
+//     ages(yorAge);
+// }
 
 ///////////////////////////////////////////////////
 
